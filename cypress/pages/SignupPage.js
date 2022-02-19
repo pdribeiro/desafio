@@ -66,11 +66,13 @@ class SingupPage{
     userfixo(){
 
         cy.get('[data-testid="cadastrar"]').click()        
-        cy.get('[data-testid="nome"]').type('User4')
-        cy.get('[data-testid="email"]').type('User4@teste.com.br')
+        cy.get('[data-testid="nome"]').type('User6')
+        cy.get('[data-testid="email"]').type('User6@teste.com.br')
         cy.get('[data-testid="password"]').type('1234')
         cy.get('[data-testid="checkbox"]').click()
         cy.get('[data-testid="cadastrar"]').click()
+        cy.get('.alert > :nth-child(2)').should('have.text', 'Cadastro realizado com sucesso')
+
 
     }
 
